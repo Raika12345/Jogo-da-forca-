@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogo da Forca</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Jogo da Forca</h1>
+    
+    <div class="menu">
+      <label for="categoria">Escolha a categoria:</label>
+      <select id="categoria">
+        <option value="informatica">Informática Básica</option>
+        <option value="redes">Redes de Computadores</option>
+        <option value="hardware">Hardware</option>
+      </select>
+      <button onclick="iniciarJogo()">Iniciar Jogo</button>
+    </div>
+
+    <div id="jogo" class="escondido">
+      <div class="status">
+        <p>Tempo: <span id="cronometro">60</span>s</p>
+        <p>Pontuação: <span id="pontuacao">0</span></p>
+      </div>
+
+      <canvas id="forcaCanvas" width="200" height="200"></canvas>
+
+      <p id="palavra"></p>
+      <div id="letras"></div>
+      <p id="mensagem"></p>
+      <button onclick="reiniciarJogo()">Reiniciar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
